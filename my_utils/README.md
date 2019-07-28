@@ -1,0 +1,1 @@
+A package for some common core type functions that dont (yet) merit their own seperate package.
