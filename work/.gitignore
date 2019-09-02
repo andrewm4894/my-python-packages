@@ -1,0 +1,6 @@
+# ignore python folders
+python/
+python.zip
+
+# jupyter checkpoints
+.ipynb_checkpoints
