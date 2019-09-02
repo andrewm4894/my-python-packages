@@ -1,0 +1,35 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below.
+Vagrant.configure("2") do |config|
+
+  # box info
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.define 'my_python_packages'
+
+  # forward 8888,9 for jupyter
+  config.vm.network "forwarded_port", guest: 8888, host: 8888
+  config.vm.network "forwarded_port", guest: 8889, host: 8889
+
+  # sync some folders
+  config.vm.synced_folder "packages/", "/home/vagrant/packages/"
+  config.vm.synced_folder "python/", "/home/vagrant/python/"
+  config.vm.synced_folder "notebooks/", "/home/vagrant/notebooks/"
+  config.vm.synced_folder "C:/Users/amaguire/.aws", "/home/vagrant/.aws/"
+
+  # copy files to box
+  config.vm.provision :file do |file|
+    file.source = "environment.yml"
+    file.destination = "/home/vagrant/environment.yml"
+  end
+  config.vm.provision :file do |file|
+    file.source = "jupyter_launch.sh"
+    file.destination = "/home/vagrant/jupyter_launch.sh"
+  end
+
+  # run provision script
+  config.vm.provision "box_setup", type: "shell", privileged: false, run: "always",
+    path: "vagrant_provision/box_setup.sh"
+
+end

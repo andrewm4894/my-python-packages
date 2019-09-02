@@ -1,9 +1,0 @@
-my_dev-0.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
-my_dev-0.1.dist-info/METADATA,sha256=cchLfIpfHqVH9pYCKaww8ZMw87X8iqvdSxFDHFfcIjc,227
-my_dev-0.1.dist-info/RECORD,,
-my_dev-0.1.dist-info/WHEEL,sha256=dO7L5l2ShYggJoy2hAOBQU8DzSFGRB9MZL7a6FF_ctg,98
-my_dev-0.1.dist-info/top_level.txt,sha256=rnN2dMbVV_lf4dHmb0o2KhsUAamjXD0qy_6fajlisEE,7
-my_dev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
-my_dev/__pycache__/__init__.cpython-36.pyc,,
-my_dev/__pycache__/dev.cpython-36.pyc,,
-my_dev/dev.py,sha256=TsT4cZ4RgH-F27R0bjsNmwkbAtvOyhY1tDaKj3E7FuQ,128
