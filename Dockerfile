@@ -8,7 +8,9 @@ USER $NB_UID
 
 # install specific package versions i want to use here
 RUN conda install --quiet --yes \
-    pandas && \
+    pandas \
+    matplotlib \
+    boto3 && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
