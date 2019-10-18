@@ -10,6 +10,11 @@ docker build -t my-python-packages -f ./Dockerfile ./
 docker run -it --name my-python-packages -p 8888:8888 --mount type=bind,source="$(pwd)/work",target=/home/jovyan/work --mount type=bind,source="$(pwd)/packages",target=/home/jovyan/packages -e AWS_ACCESS_KEY_ID=$(aws --profile default configure get aws_access_key_id) -e AWS_SECRET_ACCESS_KEY=$(aws --profile default configure get aws_secret_access_key) my-python-packages
 ```
 
+## Run container
+```
+docker run -it --name my-python-packages -p 8888:8888 my-python-packages
+```
+
 ## Stop container
 ```
 docker stop my-python-packages
